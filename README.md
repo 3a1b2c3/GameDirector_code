@@ -327,14 +327,11 @@ checkpoints to `output/world_model/`. It trains at 480×832 with learning rate
 If you find our work useful in your research, please cite it as follows:
 
 ```bibtex
-@misc{lin2026gamedirector,
-      title={GameDirector: Decoupling Gameplay Logic from Rendering for Player-Configurable Game World Models},
-      author={Zijun Lin and Zhiyang Deng and Yuzhe Wu and Bihan Wen and Yeying Jin},
-      year={2026},
-      eprint={2609.25652},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2609.25652},
+@article{lin2026gamedirector,
+  title={GameDirector: Decoupling Gameplay Logic from Rendering for Player-Configurable Game World Models},
+  author={Lin, Zijun and Deng, Zhiyang and Wu, Yuzhe and Wen, Bihan and Jin, Yeying},
+  journal={arXiv preprint arXiv:2609.25652},
+  year={2026}
 }
 ```
 
