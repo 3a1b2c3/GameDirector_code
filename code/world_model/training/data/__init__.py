@@ -1,3 +1,3 @@
-from .vrising_dataset import VRisingDataset
+from .vampire_dataset import VampireDataset
 
-__all__ = ["VRisingDataset"]
+__all__ = ["VampireDataset"]

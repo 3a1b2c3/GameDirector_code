@@ -200,7 +200,7 @@ class _ClosedLoopCore:
         return cells, events, planner_meta
 
     def _apply_cell(self, signal: dict[str, Any], info: dict[str, Any]):
-        # NRFTW keeps its original attack-prompt gate untouched. V Rising and
+        # NRFTW keeps its original attack-prompt gate untouched. Vampire and
         # Hollow Knight bosses spend most cells on non-"attack"-classified
         # skills (repositioning, wind-ups, etc.), so gating damage on that
         # classification left AttackNet's correctly-detected hits discarded

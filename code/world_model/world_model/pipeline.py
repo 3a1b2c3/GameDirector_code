@@ -143,7 +143,7 @@ class WorldModelPipeline(torch.nn.Module):
         tile_stride: Sequence[int] = (15, 26),
     ) -> WorldModelPipelineOutput:
         if num_frames != 80:
-            raise ValueError("VRising world-model checkpoints output exactly 80 frames")
+            raise ValueError("Vampire world-model checkpoints output exactly 80 frames")
         if (prompts is None) == (prompt_file is None):
             raise ValueError("provide exactly one of prompts or prompt_file")
         prompts = list(prompts) if prompts is not None else load_prompts(prompt_file)

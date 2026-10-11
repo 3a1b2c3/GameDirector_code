@@ -530,7 +530,7 @@ class SpecialBossPlanner(_HTTPPlanner):
 
 
 class ActionPlanner(_HTTPPlanner):
-    """VRising's real situation-conditioned action/movement planner."""
+    """Vampire's real situation-conditioned action/movement planner."""
 
     def __init__(self, *, game: GameSpec, boss_name: str, cards: dict[str, dict[str, Any]], max_plan: int = 3, **kwargs):
         super().__init__(**kwargs)

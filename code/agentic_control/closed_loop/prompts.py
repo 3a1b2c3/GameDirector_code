@@ -39,7 +39,7 @@ class PromptVocabulary:
     """Load only exact strings observed for the selected game and characters.
 
     Action aliases are canonicalized while loading (not while composing), so
-    VRising's locomotion labels become the exact dataset phrase ``no action``.
+    Vampire's locomotion labels become the exact dataset phrase ``no action``.
     The world model consequently never receives a synthetic or unseen skill.
     """
 

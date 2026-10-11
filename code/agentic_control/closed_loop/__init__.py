@@ -1,4 +1,4 @@
-"""Shared closed-loop agent for NRFTW, VRising, and Hollow Knight death data."""
+"""Shared closed-loop agent for NRFTW, Vampire, and Hollow Knight death data."""
 
 import sys
 from pathlib import Path

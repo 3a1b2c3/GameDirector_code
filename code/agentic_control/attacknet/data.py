@@ -48,7 +48,7 @@ def _fight_key(state: dict[str, Any]) -> tuple[str, str, int, int]:
 
 def _health(sample: dict[str, Any]) -> tuple[float, float]:
     """Return GT health ordered as player, boss. Supports both the nested NRFTW/hk
-    schema (sample.player.hp / sample.boss.hp) and vrising's flat schema
+    schema (sample.player.hp / sample.boss.hp) and vampire's flat schema
     (sample.player_hp / sample.boss_hp)."""
     try:
         if "player" in sample and "boss" in sample:

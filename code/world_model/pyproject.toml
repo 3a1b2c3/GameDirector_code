@@ -16,7 +16,7 @@ dependencies = [
 ]
 
 [project.scripts]
-vrising-world-model = "world_model.cli:main"
+vampire-world-model = "world_model.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["."]

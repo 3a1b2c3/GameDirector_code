@@ -10,9 +10,10 @@ The public model repository contains these three checkpoints:
 | `situationnet/situationnet.pt` | estimates player/boss distance and orientation |
 | `world_model/ar_world_model.safetensors` | causal AR video world model used by the agentic rollout |
 
-The accompanying `config.json` files and `SHA256SUMS` are also required for
-validation. Model weights are intentionally excluded from the source-code
-repository.
+`SHA256SUMS` is included in the public model repository for integrity checks.
+The local `config.json` files document training settings but are not required
+at runtime and are not distributed in the public model repository. Model
+weights are intentionally excluded from the source-code repository.
 
 ## 0. Prepare the source environment
 

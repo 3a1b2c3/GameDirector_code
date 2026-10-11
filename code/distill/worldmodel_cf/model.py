@@ -1,4 +1,4 @@
-"""Weight-compatible causal form of the video-only VRising world model.
+"""Weight-compatible causal form of the video-only Vampire world model.
 
 The bidirectional teacher and causal student share an identical parameter state dict.
 Only self-attention geometry changes; the StatePlay state branch is absent.

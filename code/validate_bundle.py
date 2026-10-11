@@ -59,12 +59,6 @@ def main() -> None:
     if missing:
         raise SystemExit(f"missing bundled model files: {missing}")
 
-    for name in ("attacknet", "situationnet"):
-        config_path = expected[name].with_name("config.json")
-        config = json.loads(config_path.read_text(encoding="utf-8"))
-        if not isinstance(config, dict):
-            raise SystemExit(f"invalid config: {config_path}")
-
     from safetensors import safe_open
 
     tensor_counts = {}

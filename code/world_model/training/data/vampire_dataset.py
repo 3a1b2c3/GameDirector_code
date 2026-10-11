@@ -1,4 +1,4 @@
-"""VRising 5-second clips with 20 temporally aligned prompt cells."""
+"""Vampire 5-second clips with 20 temporally aligned prompt cells."""
 from __future__ import annotations
 
 import json
@@ -29,7 +29,7 @@ def _read_rows(path: Path) -> list[dict]:
         payload = _read_json(path)
         return payload if isinstance(payload, list) else [payload]
     if path.suffix != ".jsonl":
-        raise ValueError(f"VRising metadata must be JSON or JSONL, got {path}")
+        raise ValueError(f"Vampire metadata must be JSON or JSONL, got {path}")
     rows = []
     with path.open("r", encoding="utf-8") as handle:
         for line_number, line in enumerate(handle, start=1):
@@ -42,7 +42,7 @@ def _read_rows(path: Path) -> list[dict]:
     return rows
 
 
-class VRisingDataset(torch.utils.data.Dataset):
+class VampireDataset(torch.utils.data.Dataset):
     """Return video targets, the first-frame condition, and 20 prompts only."""
 
     load_from_cache = False
@@ -79,7 +79,7 @@ class VRisingDataset(torch.utils.data.Dataset):
         self.repeat = max(1, int(repeat))
         self.rows = _read_rows(self.metadata_path)
         if not self.rows:
-            raise ValueError(f"VRising metadata is empty: {self.metadata_path}")
+            raise ValueError(f"Vampire metadata is empty: {self.metadata_path}")
         self.video_operator = default_video_operator(
             base_path=str(self.root),
             max_pixels=max_pixels,
@@ -102,7 +102,7 @@ class VRisingDataset(torch.utils.data.Dataset):
         if cells is None:
             relative_path = row.get("sidecar") or row.get("prompt_file")
             if not relative_path:
-                raise KeyError("VRising row has neither embedded prompts nor prompt_file")
+                raise KeyError("Vampire row has neither embedded prompts nor prompt_file")
             payload = _read_json(self.root / relative_path)
             cells = payload.get("prompts")
         if not isinstance(cells, list) or len(cells) != self.expected_prompts:
@@ -141,7 +141,7 @@ class VRisingDataset(torch.utils.data.Dataset):
         row = self.rows[index % len(self.rows)]
         relative_clip = row.get("clip") or row.get("video")
         if not relative_clip:
-            raise KeyError("VRising row is missing clip")
+            raise KeyError("Vampire row is missing clip")
         video = self.video_operator(relative_clip)
         if len(video) != self.num_frames:
             raise ValueError(
@@ -167,4 +167,4 @@ class VRisingDataset(torch.utils.data.Dataset):
         }
 
 
-__all__ = ["VRisingDataset"]
+__all__ = ["VampireDataset"]

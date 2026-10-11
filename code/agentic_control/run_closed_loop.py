@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run one real closed-loop agent for NRFTW, VRising, or Hollow Knight."""
+"""Run one real closed-loop agent for NRFTW, Vampire, or Hollow Knight."""
 
 from __future__ import annotations
 

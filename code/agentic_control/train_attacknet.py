@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Train AttackNet on multiple games at once (nrftw + vrising + hk, ...).
+"""Train AttackNet on multiple games at once (nrftw + vampire + hk, ...).
 
 Adapted from train_attacknet.py: instead of a single --data_root, this accepts
 one (data_root, train_jobs, val_jobs, game_name) tuple per game, concatenates
@@ -43,7 +43,7 @@ DEFAULT_OUTPUT_DIR = Path(__file__).resolve().parents[2] / "output" / "attacknet
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--game_names", nargs="+", required=True, help="e.g. nrftw vrising hk")
+    parser.add_argument("--game_names", nargs="+", required=True, help="e.g. nrftw vampire hk")
     parser.add_argument("--data_root", nargs="+", required=True, help="one per game, same order")
     parser.add_argument("--train_jobs", nargs="+", required=True, help="one per game, same order")
     parser.add_argument("--val_jobs", nargs="+", required=True, help="one per game, same order")

@@ -110,7 +110,7 @@ def build_records(
                     and (include_post_death or not bool(sample.get("post_death", False)))
                 )
         except ValueError:
-            # Some non-nrftw sources (e.g. Vrising sessions with a raw-log
+            # Some non-nrftw sources (e.g. Vampire sessions with a raw-log
             # gap) only have partial geometry coverage; skip those clips
             # instead of failing the whole multi-game build.
             skipped_missing_geometry += 1

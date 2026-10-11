@@ -1,4 +1,4 @@
-"""VRising dataset profile used by the world-model training entry point."""
+"""Vampire dataset profile used by the world-model training entry point."""
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -11,8 +11,8 @@ class GameProfile:
     fixed_prompt: str
 
 
-VRISING = GameProfile(
-    name="vrising",
-    description="V Rising: player-versus-boss 5-second clips",
-    fixed_prompt="Player fights a boss in V Rising.",
+VAMPIRE = GameProfile(
+    name="vampire",
+    description="Vampire: player-versus-boss 5-second clips",
+    fixed_prompt="Player fights a boss in Vampire.",
 )

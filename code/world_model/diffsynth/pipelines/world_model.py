@@ -1,4 +1,4 @@
-"""Training pipeline for the prompt-conditioned VRising video world model."""
+"""Training pipeline for the prompt-conditioned Vampire video world model."""
 from __future__ import annotations
 
 from typing import Union
@@ -221,7 +221,7 @@ def model_fn_world_model(
     """Video-only forward with one clean latent followed by 20 predictions."""
     if context is None or context.ndim != 4 or context.shape[1] != 20:
         raise ValueError(
-            "VRising world model requires context [B,20,S,text_dim]; "
+            "Vampire world model requires context [B,20,S,text_dim]; "
             f"got {None if context is None else tuple(context.shape)}"
         )
     context = dit.text_embedding(context)

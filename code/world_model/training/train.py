@@ -1,4 +1,4 @@
-"""Train the VRising first-frame + 20-prompt video world model."""
+"""Train the Vampire first-frame + 20-prompt video world model."""
 from __future__ import annotations
 
 import argparse
@@ -18,9 +18,9 @@ for _path in (str(_HERE), str(_PROJECT_ROOT)):
     if _path not in sys.path:
         sys.path.insert(0, _path)
 
-from data.profiles import VRISING  # noqa: E402
+from data.profiles import VAMPIRE  # noqa: E402
 from data.prompt_utils import resolve_temporal_prompts  # noqa: E402
-from data.vrising_dataset import VRisingDataset  # noqa: E402
+from data.vampire_dataset import VampireDataset  # noqa: E402
 from runner import launch_training_task  # noqa: E402
 
 from diffsynth.diffusion import *  # noqa: E402,F401,F403
@@ -318,7 +318,7 @@ class WorldModelTrainingModule(DiffusionTrainingModule):  # noqa: F405
 
 
 def build_parser():
-    parser = argparse.ArgumentParser(description="VRising video world-model training")
+    parser = argparse.ArgumentParser(description="Vampire video world-model training")
     parser = add_general_config(parser)  # noqa: F405
     parser = add_video_size_config(parser)  # noqa: F405
     parser.add_argument("--tokenizer_path", type=str, default=None)
@@ -347,7 +347,7 @@ def build_dataset(args):
     base_paths = [value.strip() for value in args.dataset_base_path.split(";") if value.strip()]
     metadata_paths = [value.strip() for value in args.dataset_metadata_path.split(";") if value.strip()]
     if len(base_paths) <= 1 and len(metadata_paths) <= 1:
-        return VRisingDataset(
+        return VampireDataset(
             base_path=args.dataset_base_path,
             metadata_path=args.dataset_metadata_path,
             repeat=args.dataset_repeat,
@@ -364,7 +364,7 @@ def build_dataset(args):
             f"and {len(metadata_paths)} metadata paths"
         )
     datasets = [
-        VRisingDataset(
+        VampireDataset(
             base_path=base_path,
             metadata_path=metadata_path,
             repeat=args.dataset_repeat,
@@ -398,7 +398,7 @@ def main():
     _reserve_cuda_memory(args.reserve_cuda_memory_gb)
     dataset = build_dataset(args)
     model = WorldModelTrainingModule(
-        profile=VRISING,
+        profile=VAMPIRE,
         model_paths=args.model_paths,
         model_id_with_origin_paths=args.model_id_with_origin_paths,
         tokenizer_path=args.tokenizer_path,

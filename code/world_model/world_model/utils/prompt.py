@@ -1,4 +1,4 @@
-"""Load and validate the 20 temporal VRising prompts."""
+"""Load and validate the 20 temporal Vampire prompts."""
 from __future__ import annotations
 
 import json

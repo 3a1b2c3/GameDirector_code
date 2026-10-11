@@ -43,7 +43,7 @@ def _card(
 
 NRFTW_DISTANCE = "NRFTW world-coordinate units (horizontal_distance)"
 HK_DISTANCE = "Hollow Knight world-coordinate units (distance_2d)"
-VRISING_DISTANCE = "VRising world-coordinate units (horizontal_distance)"
+VAMPIRE_DISTANCE = "Vampire world-coordinate units (horizontal_distance)"
 
 
 # Modal uninterrupted release length, conservative observed onset gap, and
@@ -109,14 +109,14 @@ HK_BASIC_ACTIONS = {
 }
 
 
-VRISING_ACTION_CARDS: dict[str, dict[str, Any]] = {
+VAMPIRE_ACTION_CARDS: dict[str, dict[str, Any]] = {
     "no_action": {
         "phrase": "hold, recover, or reposition without attacking",
         "function": "spacing and recovery",
         "effect_on_distance": "movement controls spacing",
         "role": "reposition",
         "duration_s": 1.0,
-        "range_profile": {"class": "any", "best_band": [0.0, 20.0], "unit": VRISING_DISTANCE},
+        "range_profile": {"class": "any", "best_band": [0.0, 20.0], "unit": VAMPIRE_DISTANCE},
     },
     "melee_attack": {
         "phrase": "a close-range melee attack",
@@ -124,7 +124,7 @@ VRISING_ACTION_CARDS: dict[str, dict[str, Any]] = {
         "effect_on_distance": "best when the player is close",
         "role": "close punish",
         "duration_s": 1.0,
-        "range_profile": {"class": "close", "best_band": [0.0, 4.0], "unit": VRISING_DISTANCE},
+        "range_profile": {"class": "close", "best_band": [0.0, 4.0], "unit": VAMPIRE_DISTANCE},
     },
 }
 
@@ -175,7 +175,7 @@ class GameSpec:
             raise ValueError(f"no basic action configured for {boss_name}") from error
 
     def canonical_action(self, action: str) -> str:
-        if self.key == "vrising":
+        if self.key == "vampire":
             if action == "death":
                 return self.death_action
             if action == "melee_attack":
@@ -186,7 +186,7 @@ class GameSpec:
 
     def action_cards(self, boss_name: str) -> dict[str, dict[str, Any]]:
         if self.decision_mode == "plan":
-            return deepcopy(VRISING_ACTION_CARDS)
+            return deepcopy(VAMPIRE_ACTION_CARDS)
         return self.skill_cards(boss_name)
 
     def attack_actions(self, boss_name: str) -> set[str]:
@@ -211,14 +211,14 @@ GAMES: dict[str, GameSpec] = {
             "Plague Leader": "melee_attack",
         },
     ),
-    "vrising": GameSpec(
-        key="vrising",
-        display_name="V Rising",
+    "vampire": GameSpec(
+        key="vampire",
+        display_name="Vampire",
         players={1: "Vampire Lord"},
         bosses={1: "Harpy Queen"},
         prompt_root=Path(),
         decision_mode="plan",
-        distance_unit=VRISING_DISTANCE,
+        distance_unit=VAMPIRE_DISTANCE,
         skill_library={"Harpy Queen": {}},
         basic_actions={"Harpy Queen": "melee_attack"},
         default_player_hp=1000,

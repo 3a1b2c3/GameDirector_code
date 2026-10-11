@@ -14,7 +14,7 @@ def resolve_temporal_prompts(
     profile: GameProfile,
     expected_count: int = 20,
 ) -> list[str]:
-    """Return the 20 already-rendered VRising prompt strings for one clip."""
+    """Return the 20 already-rendered Vampire prompt strings for one clip."""
     raw = row.get("prompts", None)
     if raw is None:
         raw = [profile.fixed_prompt] * expected_count
