@@ -135,6 +135,27 @@ overrides, devices, and generation settings.
 
 ## Training
 
+Training data for NRFTW and Hollow Knight (HK) is published at
+[onepiece1999/GameDirector-Training-Data](https://huggingface.co/datasets/onepiece1999/GameDirector-Training-Data).
+It contains 23,966 NRFTW samples and 10,324 HK samples, with evaluation
+examples excluded. The repository is about 60.6 GB and contains WebDataset tar
+shards, per-game `train.jsonl` indexes, and checksums. It does not include the
+V Rising training split used by the three-game checkpoints.
+
+Install the Hugging Face CLI if it is not already available, then download the
+dataset to a location with at least 61 GB of free space:
+
+```bash
+python -m pip install -U huggingface_hub
+hf download onepiece1999/GameDirector-Training-Data \
+  --repo-type dataset \
+  --local-dir /path/to/GameDirector-Training-Data
+```
+
+The training commands below take local data roots and train/validation
+manifests. The published dataset is distributed as tar shards; prepare it in
+the local clip/state layout expected by those commands before training.
+
 AttackNet and SituationNet take parallel lists of game names, dataset roots,
 and train/validation manifests:
 
