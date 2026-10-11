@@ -334,11 +334,3 @@ If you find our work useful in your research, please cite it as follows:
   year={2026}
 }
 ```
-
-## License
-
-Third-party Wan/DiffSynth notices are in `code/world_model/LICENSE` and
-`code/world_model/NOTICE`. Before publishing this repository as open source,
-the project owner must add a root license covering the original GameDirector
-code and confirm redistribution rights for examples and reference videos.
-Checkpoint licensing belongs in the separate Hugging Face model repository.
