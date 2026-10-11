@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "ticks_per_rollout": 12,
+  "frames_per_tick": 80,
+  "fps": 16,
+  "world_model": {
+    "mode": "causal_ar",
+    "stage": 1,
+    "sampler": "euler",
+    "steps": 30,
+    "cfg": 2.0,
+    "checkpoint": "model/world_model/ar_world_model.safetensors",
+    "post_death_seconds": 5.0,
+    "max_duration_seconds": 60.0
+  },
+  "input_contract": {
+    "provided": ["initial_frame", "player_action_movement_track"],
+    "default_state": {"player_hp": 500, "boss_hp": 500, "player_attack": 40, "boss_attack": 20, "boss_skill": 20, "boss_skill_max": 20},
+    "agent_managed": ["boss_actions", "boss_movement", "skill_selection", "cooldowns", "damage", "hp_transitions", "skill_meter", "death_behavior"]
+  },
+  "samples": [
+    {"name": "nrftw_01", "game": "nrftw", "player": "Red Knight", "boss": "Plague Leader", "background": "Frozen Wasteland", "seed": 2, "provenance": "website configure: fight0647_clip0002"},
+    {"name": "nrftw_02", "game": "nrftw", "player": "Green Scout", "boss": "Mutant Soldier", "background": "Frozen Wasteland", "seed": 2, "provenance": "website configure: fight0890_clip0004"},
+    {"name": "nrftw_03", "game": "nrftw", "player": "Grey Monk", "boss": "Golden Bird", "background": "none", "seed": 31, "ticks": 6, "initial_state": {"player_hp": 500, "boss_hp": 500, "player_attack": 120, "boss_attack": 120, "boss_skill": 20, "boss_skill_max": 20}, "provenance": "held-out evaluation input 07_GreyMonk_vs_GoldenBird"},
+    {"name": "hk_01", "game": "hk", "player": "the Knight", "boss": "Broken Vessel", "background": null, "seed": 14, "provenance": "website configure: rollout"},
+    {"name": "hk_02", "game": "hk", "player": "the Knight", "boss": "Hornet", "background": null, "seed": 11, "provenance": "website configure: rollout_2"},
+    {"name": "hk_03", "game": "hk", "player": "the Knight", "boss": "Dung Defender", "background": null, "seed": 19, "provenance": "website configure: rollout_3"},
+    {"name": "hk_04", "game": "hk", "player": "the Knight", "boss": "Hornet", "background": null, "seed": 3, "provenance": "website planning: hk_02_tick0000_orb_toss"},
+    {"name": "hk_05", "game": "hk", "player": "the Knight", "boss": "Gruz Mother", "background": null, "seed": 2, "provenance": "held-out quality/diversity sample"}
+  ]
+}

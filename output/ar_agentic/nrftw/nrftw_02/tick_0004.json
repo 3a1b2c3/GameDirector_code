@@ -1,0 +1,933 @@
+{
+  "game": "nrftw",
+  "tick": 4,
+  "cells": 14,
+  "duration_s": 3.5,
+  "partial_tick": true,
+  "characters": {
+    "player": "Green Scout",
+    "boss": "Mutant Soldier"
+  },
+  "clip": "output/ar_agentic/nrftw/nrftw_05/clip_0004.mp4",
+  "world_model_checkpoint": "model/world_model/ar_world_model.safetensors",
+  "world_model_runtime": {
+    "cfg_scale": 2.0,
+    "sampler": "euler",
+    "steps": 30,
+    "attention_sink": true,
+    "attention_sink_layout": {
+      "fixed_first_latents": 3,
+      "sliding_latest_latents": 17,
+      "max_latents": 20
+    },
+    "reanchor_between_ticks": false,
+    "kv_reset_between_ticks": false,
+    "rgb_vae_reencode_between_ticks": false,
+    "tick_cells": 20
+  },
+  "combat_before": {
+    "player_hp": 320,
+    "boss_hp": 0,
+    "player_attack": 40,
+    "boss_attack": 20,
+    "boss_skill": 20,
+    "boss_skill_max": 20
+  },
+  "combat_after": {
+    "player_hp": 320,
+    "boss_hp": 0,
+    "player_attack": 40,
+    "boss_attack": 20,
+    "boss_skill": 20,
+    "boss_skill_max": 20
+  },
+  "situation_input": {
+    "distance_value": 2.3828,
+    "distance_bin": "2-4",
+    "dp_value": 2.3828,
+    "dp_bin": "2-4",
+    "angle_value": 0.009775,
+    "angle_bin": "right",
+    "relative_side": "right",
+    "front_cone": true,
+    "decision_zone": "front",
+    "tactical_sector": "front",
+    "behind": false,
+    "distance_unit": "NRFTW world-coordinate units (horizontal_distance)"
+  },
+  "situation_next": {
+    "distance_value": 2.3828,
+    "distance_bin": "2-4",
+    "dp_value": 2.3828,
+    "dp_bin": "2-4",
+    "angle_value": 0.009775,
+    "angle_bin": "right",
+    "relative_side": "right",
+    "front_cone": true,
+    "decision_zone": "front",
+    "tactical_sector": "front",
+    "behind": false,
+    "distance_unit": "NRFTW world-coordinate units (horizontal_distance)"
+  },
+  "cooldowns_before": {
+    "back_spin": {
+      "seconds_since_last_use": 60.0,
+      "cooldown_s": 5.5,
+      "ready": true
+    },
+    "front_spin": {
+      "seconds_since_last_use": 20.0,
+      "cooldown_s": 4.75,
+      "ready": true
+    },
+    "running_slash": {
+      "seconds_since_last_use": 60.0,
+      "cooldown_s": 5.25,
+      "ready": true
+    }
+  },
+  "cooldowns_after": {
+    "back_spin": {
+      "seconds_since_last_use": 60.0,
+      "cooldown_s": 5.5,
+      "ready": true
+    },
+    "front_spin": {
+      "seconds_since_last_use": 23.5,
+      "cooldown_s": 4.75,
+      "ready": true
+    },
+    "running_slash": {
+      "seconds_since_last_use": 60.0,
+      "cooldown_s": 5.25,
+      "ready": true
+    }
+  },
+  "plan_events": [],
+  "planner": {
+    "source": "death_override",
+    "error": null,
+    "raw": null
+  },
+  "player_track_wrapped": false,
+  "prompt_cells": [
+    {
+      "cell": 0,
+      "player_clause": "Green Scout stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "prompt": "Green Scout stays stationary while performing no action, Mutant Soldier stays stationary while performing dying in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 1,
+      "player_clause": "Green Scout stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "prompt": "Green Scout stays stationary while performing no action, Mutant Soldier stays stationary while performing dying in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 2,
+      "player_clause": "Green Scout stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "prompt": "Green Scout stays stationary while performing no action, Mutant Soldier stays stationary while performing dying in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 3,
+      "player_clause": "Green Scout stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "prompt": "Green Scout stays stationary while performing no action, Mutant Soldier stays stationary while performing dying in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 4,
+      "player_clause": "Green Scout stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "prompt": "Green Scout stays stationary while performing no action, Mutant Soldier stays stationary while performing dying in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 5,
+      "player_clause": "Green Scout stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "prompt": "Green Scout stays stationary while performing no action, Mutant Soldier stays stationary while performing dying in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 6,
+      "player_clause": "Green Scout stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "prompt": "Green Scout stays stationary while performing no action, Mutant Soldier stays stationary while performing dying in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 7,
+      "player_clause": "Green Scout stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "prompt": "Green Scout stays stationary while performing no action, Mutant Soldier stays stationary while performing dying in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 8,
+      "player_clause": "Green Scout stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "prompt": "Green Scout stays stationary while performing no action, Mutant Soldier stays stationary while performing dying in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 9,
+      "player_clause": "Green Scout stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "prompt": "Green Scout stays stationary while performing no action, Mutant Soldier stays stationary while performing dying in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 10,
+      "player_clause": "Green Scout stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "prompt": "Green Scout stays stationary while performing no action, Mutant Soldier stays stationary while performing dying in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 11,
+      "player_clause": "Green Scout stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "prompt": "Green Scout stays stationary while performing no action, Mutant Soldier stays stationary while performing dying in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 12,
+      "player_clause": "Green Scout stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "prompt": "Green Scout stays stationary while performing no action, Mutant Soldier stays stationary while performing dying in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 13,
+      "player_clause": "Green Scout stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "prompt": "Green Scout stays stationary while performing no action, Mutant Soldier stays stationary while performing dying in Frozen Wasteland",
+      "repair": null
+    }
+  ],
+  "attacknet_cells": [
+    {
+      "player_hit_probability": 0.0002959570847451687,
+      "boss_hit_probability": 0.0014103584690019488,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.004609572235494852,
+      "boss_hit_probability": 0.0028009270317852497,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0018675660248845816,
+      "boss_hit_probability": 0.0033766122069209814,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0015011823270469904,
+      "boss_hit_probability": 0.0025509123224765062,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0025509123224765062,
+      "boss_hit_probability": 0.0016484829830005765,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.00407013762742281,
+      "boss_hit_probability": 0.002182716503739357,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0044683837331831455,
+      "boss_hit_probability": 0.0017007222631946206,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.004905405919998884,
+      "boss_hit_probability": 0.0025509123224765062,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.005554925184696913,
+      "boss_hit_probability": 0.0023967307060956955,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.00628990214318037,
+      "boss_hit_probability": 0.0026316740550100803,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.005220125429332256,
+      "boss_hit_probability": 0.0017546144081279635,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.00628990214318037,
+      "boss_hit_probability": 0.0018675660248845816,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.00628990214318037,
+      "boss_hit_probability": 0.0016484829830005765,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.004905405919998884,
+      "boss_hit_probability": 0.0013250223128125072,
+      "player_hit": false,
+      "boss_hit": false
+    }
+  ],
+  "health_timeline": [
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "cell": 0,
+      "global_cell": 80,
+      "attacknet": {
+        "player_hit_probability": 0.0002959570847451687,
+        "boss_hit_probability": 0.0014103584690019488,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Win"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "cell": 1,
+      "global_cell": 81,
+      "attacknet": {
+        "player_hit_probability": 0.004609572235494852,
+        "boss_hit_probability": 0.0028009270317852497,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Win"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "cell": 2,
+      "global_cell": 82,
+      "attacknet": {
+        "player_hit_probability": 0.0018675660248845816,
+        "boss_hit_probability": 0.0033766122069209814,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Win"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "cell": 3,
+      "global_cell": 83,
+      "attacknet": {
+        "player_hit_probability": 0.0015011823270469904,
+        "boss_hit_probability": 0.0025509123224765062,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Win"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "cell": 4,
+      "global_cell": 84,
+      "attacknet": {
+        "player_hit_probability": 0.0025509123224765062,
+        "boss_hit_probability": 0.0016484829830005765,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Win"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "cell": 5,
+      "global_cell": 85,
+      "attacknet": {
+        "player_hit_probability": 0.00407013762742281,
+        "boss_hit_probability": 0.002182716503739357,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Win"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "cell": 6,
+      "global_cell": 86,
+      "attacknet": {
+        "player_hit_probability": 0.0044683837331831455,
+        "boss_hit_probability": 0.0017007222631946206,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Win"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "cell": 7,
+      "global_cell": 87,
+      "attacknet": {
+        "player_hit_probability": 0.004905405919998884,
+        "boss_hit_probability": 0.0025509123224765062,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Win"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "cell": 8,
+      "global_cell": 88,
+      "attacknet": {
+        "player_hit_probability": 0.005554925184696913,
+        "boss_hit_probability": 0.0023967307060956955,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Win"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "cell": 9,
+      "global_cell": 89,
+      "attacknet": {
+        "player_hit_probability": 0.00628990214318037,
+        "boss_hit_probability": 0.0026316740550100803,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Win"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "cell": 10,
+      "global_cell": 90,
+      "attacknet": {
+        "player_hit_probability": 0.005220125429332256,
+        "boss_hit_probability": 0.0017546144081279635,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Win"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "cell": 11,
+      "global_cell": 91,
+      "attacknet": {
+        "player_hit_probability": 0.00628990214318037,
+        "boss_hit_probability": 0.0018675660248845816,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Win"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "cell": 12,
+      "global_cell": 92,
+      "attacknet": {
+        "player_hit_probability": 0.00628990214318037,
+        "boss_hit_probability": 0.0016484829830005765,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Win"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 320,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "cell": 13,
+      "global_cell": 93,
+      "attacknet": {
+        "player_hit_probability": 0.004905405919998884,
+        "boss_hit_probability": 0.0013250223128125072,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Win"
+    }
+  ],
+  "outcome": "You Win",
+  "death_detected_cell": 73
+}

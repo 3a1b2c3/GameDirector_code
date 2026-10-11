@@ -1,0 +1,967 @@
+{
+  "game": "hk",
+  "player_name": "the Knight",
+  "boss_name": "Gruz Mother",
+  "prompts": [
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right"
+    }
+  ]
+}

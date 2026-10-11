@@ -1,0 +1,1393 @@
+{
+  "game": "hk",
+  "tick": 1,
+  "cells": 20,
+  "duration_s": 5.0,
+  "partial_tick": false,
+  "characters": {
+    "player": "the Knight",
+    "boss": "Broken Vessel"
+  },
+  "clip": "output/ar_agentic/hk/hk_01/clip_0001.mp4",
+  "world_model_checkpoint": "model/world_model/ar_world_model.safetensors",
+  "world_model_runtime": {
+    "cfg_scale": 2.0,
+    "sampler": "euler",
+    "steps": 30,
+    "attention_sink": true,
+    "attention_sink_layout": {
+      "fixed_first_latents": 3,
+      "sliding_latest_latents": 17,
+      "max_latents": 20
+    },
+    "reanchor_between_ticks": false,
+    "kv_reset_between_ticks": false,
+    "rgb_vae_reencode_between_ticks": false,
+    "tick_cells": 20
+  },
+  "combat_before": {
+    "player_hp": 480,
+    "boss_hp": 140,
+    "player_attack": 40,
+    "boss_attack": 20,
+    "boss_skill": 20,
+    "boss_skill_max": 20
+  },
+  "combat_after": {
+    "player_hp": 480,
+    "boss_hp": 0,
+    "player_attack": 40,
+    "boss_attack": 20,
+    "boss_skill": 20,
+    "boss_skill_max": 20
+  },
+  "situation_input": {
+    "distance_value": 5.3516,
+    "distance_bin": "4-6",
+    "dp_value": 5.3516,
+    "dp_bin": "4-6",
+    "angle_value": -0.000993,
+    "angle_bin": "center",
+    "relative_side": "center",
+    "front_cone": true,
+    "decision_zone": "front",
+    "tactical_sector": "front",
+    "behind": false,
+    "distance_unit": "Hollow Knight world-coordinate units (distance_2d)"
+  },
+  "situation_next": {
+    "distance_value": 5.3516,
+    "distance_bin": "4-6",
+    "dp_value": 5.3516,
+    "dp_bin": "4-6",
+    "angle_value": -0.000993,
+    "angle_bin": "center",
+    "relative_side": "center",
+    "front_cone": true,
+    "decision_zone": "front",
+    "tactical_sector": "front",
+    "behind": false,
+    "distance_unit": "Hollow Knight world-coordinate units (distance_2d)"
+  },
+  "cooldowns_before": {
+    "dive_stab": {
+      "seconds_since_last_use": 5.0,
+      "cooldown_s": 2.5,
+      "ready": true
+    },
+    "overhead_slash": {
+      "seconds_since_last_use": 60.0,
+      "cooldown_s": 3.0,
+      "ready": true
+    }
+  },
+  "cooldowns_after": {
+    "dive_stab": {
+      "seconds_since_last_use": 5.0,
+      "cooldown_s": 2.5,
+      "ready": true
+    },
+    "overhead_slash": {
+      "seconds_since_last_use": 60.0,
+      "cooldown_s": 3.0,
+      "ready": true
+    }
+  },
+  "plan_events": [
+    {
+      "action": "dive_stab",
+      "movement": "data_backed_sequence",
+      "onset_cell": 0,
+      "cells": 7,
+      "release_duration_s": 1.75,
+      "continued_cells": 0,
+      "skill_cost": 20
+    }
+  ],
+  "planner": {
+    "source": "llm",
+    "error": null,
+    "raw": "{\"skill\": \"dive_stab\", \"reason\": \"The current distance (5.3516) falls within the effective range for 'dive_stab' (best band [0.1, 3.3] is too narrow, but it's the only available skill and is a short gap-close action).\", \"confidence\": \"0.5\"}",
+    "raw_attempts": [
+      "{\"skill\": \"dive_stab\", \"reason\": \"The current distance (5.3516) falls within the effective range for 'dive_stab' (best band [0.1, 3.3] is too narrow, but it's the only available skill and is a short gap-close action).\", \"confidence\": \"0.5\"}"
+    ],
+    "request": {
+      "task": "Choose exactly one available special skill from live geometry; movement is controlled locally.",
+      "game": "hk",
+      "boss": "Broken Vessel",
+      "situation": {
+        "distance_value": 5.3516,
+        "distance_bin": "4-6",
+        "dp_value": 5.3516,
+        "dp_bin": "4-6",
+        "angle_value": -0.000993,
+        "angle_bin": "center",
+        "relative_side": "center",
+        "front_cone": true,
+        "decision_zone": "front",
+        "tactical_sector": "front",
+        "behind": false,
+        "distance_unit": "Hollow Knight world-coordinate units (distance_2d)"
+      },
+      "distance_semantics": {
+        "situation_fields": [
+          "distance_value",
+          "dp_value"
+        ],
+        "skill_range_field": "effective_range.best_band",
+        "unit": "Hollow Knight world-coordinate units (distance_2d)"
+      },
+      "combat_state": {
+        "player_hp": 480,
+        "boss_hp": 140,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "previous_skill": "dive_stab",
+      "available_special_skill_library": [
+        {
+          "skill": "dive_stab",
+          "description": "a diving stab onto the target",
+          "function": "airborne gap closer",
+          "effect_on_distance": "dives onto a nearby target",
+          "role": "short gap-close",
+          "release_duration_s": 1.75,
+          "effective_range": {
+            "class": "short gap-close",
+            "best_band": [
+              0.1,
+              3.3
+            ],
+            "unit": "Hollow Knight world-coordinate units (distance_2d)"
+          },
+          "skill_cost": 20
+        },
+        {
+          "skill": "overhead_slash",
+          "description": "an overhead slash",
+          "function": "committed melee strike",
+          "effect_on_distance": "punishes at close-to-mid spacing",
+          "role": "mid punish",
+          "release_duration_s": 2.5,
+          "effective_range": {
+            "class": "mid punish",
+            "best_band": [
+              2.7,
+              5.5
+            ],
+            "unit": "Hollow Knight world-coordinate units (distance_2d)"
+          },
+          "skill_cost": 20
+        }
+      ],
+      "output_format": {
+        "skill": "one listed skill",
+        "reason": "short reason",
+        "confidence": "0..1"
+      }
+    },
+    "cooldown_scheduler": {
+      "time_s": 5.0,
+      "legal_skills": [
+        "dive_stab",
+        "overhead_slash"
+      ],
+      "state": {
+        "dive_stab": {
+          "seconds_since_last_use": 5.0,
+          "cooldown_s": 2.5,
+          "ready": true
+        },
+        "overhead_slash": {
+          "seconds_since_last_use": 60.0,
+          "cooldown_s": 3.0,
+          "ready": true
+        }
+      },
+      "selected": "dive_stab"
+    }
+  },
+  "player_track_wrapped": false,
+  "prompt_cells": [
+    {
+      "cell": 0,
+      "player_clause": "the Knight stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dive_stab",
+        "movement": "up_left"
+      },
+      "boss_emitted": {
+        "action": "dive_stab",
+        "movement": "none"
+      },
+      "prompt": "the Knight stays stationary while performing no action, Broken Vessel stays stationary while performing dive stab",
+      "repair": {
+        "requested_action": "dive_stab",
+        "requested_movement": "up_left",
+        "emitted_action": "dive_stab",
+        "emitted_movement": "none",
+        "reason": "requested full prompt was absent from selected-pair vocabulary"
+      }
+    },
+    {
+      "cell": 1,
+      "player_clause": "the Knight stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dive_stab",
+        "movement": "up"
+      },
+      "boss_emitted": {
+        "action": "dive_stab",
+        "movement": "none"
+      },
+      "prompt": "the Knight stays stationary while performing no action, Broken Vessel stays stationary while performing dive stab",
+      "repair": {
+        "requested_action": "dive_stab",
+        "requested_movement": "up",
+        "emitted_action": "dive_stab",
+        "emitted_movement": "none",
+        "reason": "requested full prompt was absent from selected-pair vocabulary"
+      }
+    },
+    {
+      "cell": 2,
+      "player_clause": "the Knight stays stationary while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dive_stab",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dive_stab",
+        "movement": "none"
+      },
+      "prompt": "the Knight stays stationary while performing melee attack, Broken Vessel stays stationary while performing dive stab",
+      "repair": null
+    },
+    {
+      "cell": 3,
+      "player_clause": "the Knight moves right while performing no action",
+      "player_action": "no_action",
+      "player_movement": "right",
+      "boss_requested": {
+        "action": "dive_stab",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dive_stab",
+        "movement": "none"
+      },
+      "prompt": "the Knight moves right while performing no action, Broken Vessel stays stationary while performing dive stab",
+      "repair": null
+    },
+    {
+      "cell": 4,
+      "player_clause": "the Knight moves up while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "boss_requested": {
+        "action": "dive_stab",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dive_stab",
+        "movement": "none"
+      },
+      "prompt": "the Knight moves up while performing melee attack, Broken Vessel stays stationary while performing dive stab",
+      "repair": null
+    },
+    {
+      "cell": 5,
+      "player_clause": "the Knight moves right while performing no action",
+      "player_action": "no_action",
+      "player_movement": "right",
+      "boss_requested": {
+        "action": "dive_stab",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dive_stab",
+        "movement": "none"
+      },
+      "prompt": "the Knight moves right while performing no action, Broken Vessel stays stationary while performing dive stab",
+      "repair": null
+    },
+    {
+      "cell": 6,
+      "player_clause": "the Knight moves down while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "down",
+      "boss_requested": {
+        "action": "dive_stab",
+        "movement": "down"
+      },
+      "boss_emitted": {
+        "action": "dive_stab",
+        "movement": "down"
+      },
+      "prompt": "the Knight moves down while performing melee attack, Broken Vessel moves down while performing dive stab",
+      "repair": null
+    },
+    {
+      "cell": 7,
+      "player_clause": "the Knight moves left while performing no action",
+      "player_action": "no_action",
+      "player_movement": "left",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "the Knight moves left while performing no action, Broken Vessel stays stationary while performing no action",
+      "repair": null
+    },
+    {
+      "cell": 8,
+      "player_clause": "the Knight moves up while performing no action",
+      "player_action": "no_action",
+      "player_movement": "up",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "up"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "up"
+      },
+      "prompt": "the Knight moves up while performing no action, Broken Vessel moves up while performing no action",
+      "repair": null
+    },
+    {
+      "cell": 9,
+      "player_clause": "the Knight moves left while performing no action",
+      "player_action": "no_action",
+      "player_movement": "left",
+      "boss_requested": {
+        "action": "dash_flurry",
+        "movement": "up"
+      },
+      "boss_emitted": {
+        "action": "dash_flurry",
+        "movement": "up"
+      },
+      "prompt": "the Knight moves left while performing no action, Broken Vessel moves up while performing dash flurry",
+      "repair": null
+    },
+    {
+      "cell": 10,
+      "player_clause": "the Knight moves left while performing no action",
+      "player_action": "no_action",
+      "player_movement": "left",
+      "boss_requested": {
+        "action": "dash_flurry",
+        "movement": "up"
+      },
+      "boss_emitted": {
+        "action": "dash_flurry",
+        "movement": "up"
+      },
+      "prompt": "the Knight moves left while performing no action, Broken Vessel moves up while performing dash flurry",
+      "repair": null
+    },
+    {
+      "cell": 11,
+      "player_clause": "the Knight moves left while performing no action",
+      "player_action": "no_action",
+      "player_movement": "left",
+      "boss_requested": {
+        "action": "dash_flurry",
+        "movement": "left"
+      },
+      "boss_emitted": {
+        "action": "dash_flurry",
+        "movement": "left"
+      },
+      "prompt": "the Knight moves left while performing no action, Broken Vessel moves left while performing dash flurry",
+      "repair": null
+    },
+    {
+      "cell": 12,
+      "player_clause": "the Knight moves left while performing no action",
+      "player_action": "no_action",
+      "player_movement": "left",
+      "boss_requested": {
+        "action": "dash_flurry",
+        "movement": "left"
+      },
+      "boss_emitted": {
+        "action": "dash_flurry",
+        "movement": "left"
+      },
+      "prompt": "the Knight moves left while performing no action, Broken Vessel moves left while performing dash flurry",
+      "repair": null
+    },
+    {
+      "cell": 13,
+      "player_clause": "the Knight moves right while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "right",
+      "boss_requested": {
+        "action": "dash_flurry",
+        "movement": "right"
+      },
+      "boss_emitted": {
+        "action": "dash_flurry",
+        "movement": "right"
+      },
+      "prompt": "the Knight moves right while performing melee attack, Broken Vessel moves right while performing dash flurry",
+      "repair": null
+    },
+    {
+      "cell": 14,
+      "player_clause": "the Knight moves left while performing no action",
+      "player_action": "no_action",
+      "player_movement": "left",
+      "boss_requested": {
+        "action": "dash_flurry",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dash_flurry",
+        "movement": "none"
+      },
+      "prompt": "the Knight moves left while performing no action, Broken Vessel stays stationary while performing dash flurry",
+      "repair": null
+    },
+    {
+      "cell": 15,
+      "player_clause": "the Knight stays stationary while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dash_flurry",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dash_flurry",
+        "movement": "none"
+      },
+      "prompt": "the Knight stays stationary while performing melee attack, Broken Vessel stays stationary while performing dash flurry",
+      "repair": null
+    },
+    {
+      "cell": 16,
+      "player_clause": "the Knight moves left while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "left",
+      "boss_requested": {
+        "action": "dash_flurry",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dash_flurry",
+        "movement": "none"
+      },
+      "prompt": "the Knight moves left while performing melee attack, Broken Vessel stays stationary while performing dash flurry",
+      "repair": null
+    },
+    {
+      "cell": 17,
+      "player_clause": "the Knight moves right while performing no action",
+      "player_action": "no_action",
+      "player_movement": "right",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "down"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "down"
+      },
+      "prompt": "the Knight moves right while performing no action, Broken Vessel moves down while performing no action",
+      "repair": null
+    },
+    {
+      "cell": 18,
+      "player_clause": "the Knight moves right while performing no action",
+      "player_action": "no_action",
+      "player_movement": "right",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "the Knight moves right while performing no action, Broken Vessel stays stationary while performing no action",
+      "repair": null
+    },
+    {
+      "cell": 19,
+      "player_clause": "the Knight stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "dying",
+        "movement": "none"
+      },
+      "prompt": "the Knight stays stationary while performing no action, Broken Vessel stays stationary while performing dying",
+      "repair": null
+    }
+  ],
+  "attacknet_cells": [
+    {
+      "player_hit_probability": 0.05665242671966553,
+      "boss_hit_probability": 0.02931223064661026,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.007345826830714941,
+      "boss_hit_probability": 0.9975274205207825,
+      "player_hit": false,
+      "boss_hit": true
+    },
+    {
+      "player_hit_probability": 0.0064882696606218815,
+      "boss_hit_probability": 0.0004044814850203693,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.08756384253501892,
+      "boss_hit_probability": 3.1201914680423215e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.36840569972991943,
+      "boss_hit_probability": 0.9989995360374451,
+      "player_hit": false,
+      "boss_hit": true
+    },
+    {
+      "player_hit_probability": 0.000626334105618298,
+      "boss_hit_probability": 0.0059110685251653194,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.025565214455127716,
+      "boss_hit_probability": 0.9994471669197083,
+      "player_hit": false,
+      "boss_hit": true
+    },
+    {
+      "player_hit_probability": 0.0038244836032390594,
+      "boss_hit_probability": 0.12085322290658951,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0007793660624884069,
+      "boss_hit_probability": 1.892514956125524e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.17441026866436005,
+      "boss_hit_probability": 2.93115390377352e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0035936026833951473,
+      "boss_hit_probability": 1.3846004549122881e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.005060331895947456,
+      "boss_hit_probability": 7.484622619813308e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.09009299427270889,
+      "boss_hit_probability": 1.221907587023452e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.11920291930437088,
+      "boss_hit_probability": 8.481103577651083e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.034100424498319626,
+      "boss_hit_probability": 0.00011591933434829116,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.001987774157896638,
+      "boss_hit_probability": 4.539786823443137e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.09534945338964462,
+      "boss_hit_probability": 0.00011591933434829116,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0006878511630930007,
+      "boss_hit_probability": 0.13386748731136322,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.007815888151526451,
+      "boss_hit_probability": 0.9449946880340576,
+      "player_hit": false,
+      "boss_hit": true
+    },
+    {
+      "player_hit_probability": 0.12852513790130615,
+      "boss_hit_probability": 7.484622619813308e-05,
+      "player_hit": false,
+      "boss_hit": false
+    }
+  ],
+  "health_timeline": [
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 140,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 0,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 140,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 0,
+        "boss_skill_max": 20
+      },
+      "cell": 0,
+      "global_cell": 20,
+      "attacknet": {
+        "player_hit_probability": 0.05665242671966553,
+        "boss_hit_probability": 0.02931223064661026,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": true,
+      "player_hit_detected": false,
+      "boss_hit_detected": true,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 40,
+      "skill_gain": 5,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 140,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 0,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 100,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "cell": 1,
+      "global_cell": 21,
+      "attacknet": {
+        "player_hit_probability": 0.007345826830714941,
+        "boss_hit_probability": 0.9975274205207825,
+        "player_hit": false,
+        "boss_hit": true
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 100,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 100,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "cell": 2,
+      "global_cell": 22,
+      "attacknet": {
+        "player_hit_probability": 0.0064882696606218815,
+        "boss_hit_probability": 0.0004044814850203693,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 100,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 100,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "cell": 3,
+      "global_cell": 23,
+      "attacknet": {
+        "player_hit_probability": 0.08756384253501892,
+        "boss_hit_probability": 3.1201914680423215e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": true,
+      "player_hit_detected": false,
+      "boss_hit_detected": true,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 40,
+      "skill_gain": 5,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 100,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 10,
+        "boss_skill_max": 20
+      },
+      "cell": 4,
+      "global_cell": 24,
+      "attacknet": {
+        "player_hit_probability": 0.36840569972991943,
+        "boss_hit_probability": 0.9989995360374451,
+        "player_hit": false,
+        "boss_hit": true
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 10,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 10,
+        "boss_skill_max": 20
+      },
+      "cell": 5,
+      "global_cell": 25,
+      "attacknet": {
+        "player_hit_probability": 0.000626334105618298,
+        "boss_hit_probability": 0.0059110685251653194,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": true,
+      "player_hit_detected": false,
+      "boss_hit_detected": true,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 40,
+      "skill_gain": 5,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 10,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "cell": 6,
+      "global_cell": 26,
+      "attacknet": {
+        "player_hit_probability": 0.025565214455127716,
+        "boss_hit_probability": 0.9994471669197083,
+        "player_hit": false,
+        "boss_hit": true
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "cell": 7,
+      "global_cell": 27,
+      "attacknet": {
+        "player_hit_probability": 0.0038244836032390594,
+        "boss_hit_probability": 0.12085322290658951,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "cell": 8,
+      "global_cell": 28,
+      "attacknet": {
+        "player_hit_probability": 0.0007793660624884069,
+        "boss_hit_probability": 1.892514956125524e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "cell": 9,
+      "global_cell": 29,
+      "attacknet": {
+        "player_hit_probability": 0.17441026866436005,
+        "boss_hit_probability": 2.93115390377352e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "cell": 10,
+      "global_cell": 30,
+      "attacknet": {
+        "player_hit_probability": 0.0035936026833951473,
+        "boss_hit_probability": 1.3846004549122881e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "cell": 11,
+      "global_cell": 31,
+      "attacknet": {
+        "player_hit_probability": 0.005060331895947456,
+        "boss_hit_probability": 7.484622619813308e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "cell": 12,
+      "global_cell": 32,
+      "attacknet": {
+        "player_hit_probability": 0.09009299427270889,
+        "boss_hit_probability": 1.221907587023452e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "cell": 13,
+      "global_cell": 33,
+      "attacknet": {
+        "player_hit_probability": 0.11920291930437088,
+        "boss_hit_probability": 8.481103577651083e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "cell": 14,
+      "global_cell": 34,
+      "attacknet": {
+        "player_hit_probability": 0.034100424498319626,
+        "boss_hit_probability": 0.00011591933434829116,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "cell": 15,
+      "global_cell": 35,
+      "attacknet": {
+        "player_hit_probability": 0.001987774157896638,
+        "boss_hit_probability": 4.539786823443137e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "cell": 16,
+      "global_cell": 36,
+      "attacknet": {
+        "player_hit_probability": 0.09534945338964462,
+        "boss_hit_probability": 0.00011591933434829116,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "cell": 17,
+      "global_cell": 37,
+      "attacknet": {
+        "player_hit_probability": 0.0006878511630930007,
+        "boss_hit_probability": 0.13386748731136322,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": true,
+      "player_hit_detected": false,
+      "boss_hit_detected": true,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 20,
+      "skill_gain": 5,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 20,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 15,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "cell": 18,
+      "global_cell": 38,
+      "attacknet": {
+        "player_hit_probability": 0.007815888151526451,
+        "boss_hit_probability": 0.9449946880340576,
+        "player_hit": false,
+        "boss_hit": true
+      },
+      "outcome": "You Win"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 480,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 480,
+        "boss_hp": 0,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 20,
+        "boss_skill_max": 20
+      },
+      "cell": 19,
+      "global_cell": 39,
+      "attacknet": {
+        "player_hit_probability": 0.12852513790130615,
+        "boss_hit_probability": 7.484622619813308e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Win"
+    }
+  ],
+  "outcome": "You Win",
+  "death_detected_cell": 38
+}

@@ -1,0 +1,46 @@
+{
+  "game": "hk",
+  "ticks": 3,
+  "requested_ticks": 12,
+  "generated_cells": 51,
+  "duration_s": 12.75,
+  "characters": {
+    "player": "the Knight",
+    "boss": "Dung Defender"
+  },
+  "final_combat": {
+    "player_hp": 440,
+    "boss_hp": 0,
+    "player_attack": 40,
+    "boss_attack": 20,
+    "boss_skill": 20,
+    "boss_skill_max": 20
+  },
+  "world_model_checkpoint": "model/world_model/ar_world_model.safetensors",
+  "world_model_runtime": {
+    "cfg_scale": 2.0,
+    "sampler": "euler",
+    "steps": 30,
+    "attention_sink": true,
+    "attention_sink_layout": {
+      "fixed_first_latents": 3,
+      "sliding_latest_latents": 17,
+      "max_latents": 20
+    },
+    "reanchor_between_ticks": false,
+    "kv_reset_between_ticks": false,
+    "rgb_vae_reencode_between_ticks": false,
+    "tick_cells": 20
+  },
+  "outcome": "You Win",
+  "death_detected_cell": 30,
+  "post_death_generated_s": 5.0,
+  "stopped_after_death": true,
+  "termination_reason": "post_death_window",
+  "combined_video": "output/ar_agentic/hk/hk_03/rollout.mp4",
+  "records": [
+    "tick_0000.json",
+    "tick_0001.json",
+    "tick_0002.json"
+  ]
+}

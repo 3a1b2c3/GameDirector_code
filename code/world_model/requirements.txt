@@ -1,0 +1,17 @@
+torch>=2.0.0
+torchvision
+transformers
+accelerate
+peft
+safetensors
+einops
+numpy
+Pillow
+tqdm
+imageio[ffmpeg]
+sentencepiece
+protobuf
+ftfy
+regex
+modelscope
+huggingface_hub

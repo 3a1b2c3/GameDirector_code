@@ -1,0 +1,1207 @@
+{
+  "game": "nrftw",
+  "player_name": "Green Scout",
+  "boss_name": "Mutant Soldier",
+  "prompts": [
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "right",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "none",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "melee_attack",
+      "player_movement": "left",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    },
+    {
+      "player_action": "no_action",
+      "player_movement": "down",
+      "location": "Frozen Wasteland"
+    }
+  ]
+}

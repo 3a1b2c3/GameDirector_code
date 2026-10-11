@@ -1,0 +1,6 @@
+torch>=2.0
+transformers>=5.0
+accelerate
+safetensors
+sentencepiece
+Pillow

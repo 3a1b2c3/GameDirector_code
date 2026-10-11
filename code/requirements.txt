@@ -1,0 +1,2 @@
+-r agentic_control/requirements.txt
+-r world_model/requirements.txt

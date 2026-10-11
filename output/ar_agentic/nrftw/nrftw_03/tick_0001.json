@@ -1,0 +1,1289 @@
+{
+  "game": "nrftw",
+  "tick": 1,
+  "cells": 20,
+  "duration_s": 5.0,
+  "partial_tick": false,
+  "characters": {
+    "player": "Grey Monk",
+    "boss": "Golden Bird"
+  },
+  "clip": "output/ar_agentic/nrftw/nrftw_grid_p1_b1/clip_0001.mp4",
+  "world_model_checkpoint": "model/world_model/ar_world_model.safetensors",
+  "world_model_runtime": {
+    "cfg_scale": 2.0,
+    "sampler": "euler",
+    "steps": 30,
+    "attention_sink": true,
+    "attention_sink_layout": {
+      "fixed_first_latents": 3,
+      "sliding_latest_latents": 17,
+      "max_latents": 20
+    },
+    "reanchor_between_ticks": false,
+    "kv_reset_between_ticks": false,
+    "rgb_vae_reencode_between_ticks": false,
+    "tick_cells": 20
+  },
+  "combat_before": {
+    "player_hp": 140,
+    "boss_hp": 380,
+    "player_attack": 120,
+    "boss_attack": 120,
+    "boss_skill": 4,
+    "boss_skill_max": 20
+  },
+  "combat_after": {
+    "player_hp": 0,
+    "boss_hp": 380,
+    "player_attack": 120,
+    "boss_attack": 120,
+    "boss_skill": 6,
+    "boss_skill_max": 20
+  },
+  "situation_input": {
+    "distance_value": 1.4453,
+    "distance_bin": "0-2",
+    "dp_value": 1.4453,
+    "dp_bin": "0-2",
+    "angle_value": 0.014479,
+    "angle_bin": "right",
+    "relative_side": "right",
+    "front_cone": true,
+    "decision_zone": "front",
+    "tactical_sector": "front",
+    "behind": false,
+    "distance_unit": "NRFTW world-coordinate units (horizontal_distance)"
+  },
+  "situation_next": {
+    "distance_value": 1.4453,
+    "distance_bin": "0-2",
+    "dp_value": 1.4453,
+    "dp_bin": "0-2",
+    "angle_value": 0.014479,
+    "angle_bin": "right",
+    "relative_side": "right",
+    "front_cone": true,
+    "decision_zone": "front",
+    "tactical_sector": "front",
+    "behind": false,
+    "distance_unit": "NRFTW world-coordinate units (horizontal_distance)"
+  },
+  "cooldowns_before": {
+    "hammer_smash": {
+      "seconds_since_last_use": 60.0,
+      "cooldown_s": 14.5,
+      "ready": true
+    },
+    "jump_slam": {
+      "seconds_since_last_use": 60.0,
+      "cooldown_s": 18.25,
+      "ready": true
+    },
+    "spin_attack": {
+      "seconds_since_last_use": 5.0,
+      "cooldown_s": 20.0,
+      "ready": false
+    }
+  },
+  "cooldowns_after": {
+    "hammer_smash": {
+      "seconds_since_last_use": 60.0,
+      "cooldown_s": 14.5,
+      "ready": true
+    },
+    "jump_slam": {
+      "seconds_since_last_use": 60.0,
+      "cooldown_s": 18.25,
+      "ready": true
+    },
+    "spin_attack": {
+      "seconds_since_last_use": 10.0,
+      "cooldown_s": 20.0,
+      "ready": false
+    }
+  },
+  "plan_events": [
+    {
+      "action": "spin_attack",
+      "movement": "data_backed_sequence",
+      "onset_cell": 0,
+      "cells": 17,
+      "continued_from_previous_tick": true
+    }
+  ],
+  "planner": {
+    "source": "release_commitment",
+    "error": null,
+    "raw": null
+  },
+  "player_track_wrapped": true,
+  "prompt_cells": [
+    {
+      "cell": 0,
+      "player_clause": "Grey Monk moves down while performing no action",
+      "player_action": "no_action",
+      "player_movement": "down",
+      "boss_requested": {
+        "action": "spin_attack",
+        "movement": "down_right"
+      },
+      "boss_emitted": {
+        "action": "spin_attack",
+        "movement": "down_right"
+      },
+      "prompt": "Grey Monk moves down while performing no action, Golden Bird moves down-right while performing spin attack",
+      "repair": null
+    },
+    {
+      "cell": 1,
+      "player_clause": "Grey Monk moves down while performing no action",
+      "player_action": "no_action",
+      "player_movement": "down",
+      "boss_requested": {
+        "action": "spin_attack",
+        "movement": "down_right"
+      },
+      "boss_emitted": {
+        "action": "spin_attack",
+        "movement": "down_right"
+      },
+      "prompt": "Grey Monk moves down while performing no action, Golden Bird moves down-right while performing spin attack",
+      "repair": null
+    },
+    {
+      "cell": 2,
+      "player_clause": "Grey Monk moves down while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "down",
+      "boss_requested": {
+        "action": "spin_attack",
+        "movement": "down_right"
+      },
+      "boss_emitted": {
+        "action": "spin_attack",
+        "movement": "down_right"
+      },
+      "prompt": "Grey Monk moves down while performing melee attack, Golden Bird moves down-right while performing spin attack",
+      "repair": null
+    },
+    {
+      "cell": 3,
+      "player_clause": "Grey Monk moves left while performing no action",
+      "player_action": "no_action",
+      "player_movement": "left",
+      "boss_requested": {
+        "action": "spin_attack",
+        "movement": "down_right"
+      },
+      "boss_emitted": {
+        "action": "spin_attack",
+        "movement": "down_right"
+      },
+      "prompt": "Grey Monk moves left while performing no action, Golden Bird moves down-right while performing spin attack",
+      "repair": null
+    },
+    {
+      "cell": 4,
+      "player_clause": "Grey Monk moves left while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "left",
+      "boss_requested": {
+        "action": "spin_attack",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "spin_attack",
+        "movement": "none"
+      },
+      "prompt": "Grey Monk moves left while performing melee attack, Golden Bird stays stationary while performing spin attack",
+      "repair": null
+    },
+    {
+      "cell": 5,
+      "player_clause": "Grey Monk moves left while performing no action",
+      "player_action": "no_action",
+      "player_movement": "left",
+      "boss_requested": {
+        "action": "spin_attack",
+        "movement": "left"
+      },
+      "boss_emitted": {
+        "action": "spin_attack",
+        "movement": "left"
+      },
+      "prompt": "Grey Monk moves left while performing no action, Golden Bird moves left while performing spin attack",
+      "repair": null
+    },
+    {
+      "cell": 6,
+      "player_clause": "Grey Monk moves left while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "left",
+      "boss_requested": {
+        "action": "spin_attack",
+        "movement": "down"
+      },
+      "boss_emitted": {
+        "action": "spin_attack",
+        "movement": "down"
+      },
+      "prompt": "Grey Monk moves left while performing melee attack, Golden Bird moves down while performing spin attack",
+      "repair": null
+    },
+    {
+      "cell": 7,
+      "player_clause": "Grey Monk stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "spin_attack",
+        "movement": "down"
+      },
+      "boss_emitted": {
+        "action": "spin_attack",
+        "movement": "down"
+      },
+      "prompt": "Grey Monk stays stationary while performing no action, Golden Bird moves down while performing spin attack",
+      "repair": null
+    },
+    {
+      "cell": 8,
+      "player_clause": "Grey Monk stays stationary while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "spin_attack",
+        "movement": "up"
+      },
+      "boss_emitted": {
+        "action": "spin_attack",
+        "movement": "up"
+      },
+      "prompt": "Grey Monk stays stationary while performing melee attack, Golden Bird moves up while performing spin attack",
+      "repair": null
+    },
+    {
+      "cell": 9,
+      "player_clause": "Grey Monk moves left while performing no action",
+      "player_action": "no_action",
+      "player_movement": "left",
+      "boss_requested": {
+        "action": "spin_attack",
+        "movement": "up"
+      },
+      "boss_emitted": {
+        "action": "spin_attack",
+        "movement": "up"
+      },
+      "prompt": "Grey Monk moves left while performing no action, Golden Bird moves up while performing spin attack",
+      "repair": null
+    },
+    {
+      "cell": 10,
+      "player_clause": "Grey Monk stays stationary while performing dying",
+      "player_action": "dying",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "Grey Monk stays stationary while performing dying, Golden Bird stays stationary while performing no action",
+      "repair": null
+    },
+    {
+      "cell": 11,
+      "player_clause": "Grey Monk stays stationary while performing dying",
+      "player_action": "dying",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "Grey Monk stays stationary while performing dying, Golden Bird stays stationary while performing no action",
+      "repair": null
+    },
+    {
+      "cell": 12,
+      "player_clause": "Grey Monk stays stationary while performing dying",
+      "player_action": "dying",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "Grey Monk stays stationary while performing dying, Golden Bird stays stationary while performing no action",
+      "repair": null
+    },
+    {
+      "cell": 13,
+      "player_clause": "Grey Monk stays stationary while performing dying",
+      "player_action": "dying",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "Grey Monk stays stationary while performing dying, Golden Bird stays stationary while performing no action",
+      "repair": null
+    },
+    {
+      "cell": 14,
+      "player_clause": "Grey Monk stays stationary while performing dying",
+      "player_action": "dying",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "Grey Monk stays stationary while performing dying, Golden Bird stays stationary while performing no action",
+      "repair": null
+    },
+    {
+      "cell": 15,
+      "player_clause": "Grey Monk stays stationary while performing dying",
+      "player_action": "dying",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "Grey Monk stays stationary while performing dying, Golden Bird stays stationary while performing no action",
+      "repair": null
+    },
+    {
+      "cell": 16,
+      "player_clause": "Grey Monk stays stationary while performing dying",
+      "player_action": "dying",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "Grey Monk stays stationary while performing dying, Golden Bird stays stationary while performing no action",
+      "repair": null
+    },
+    {
+      "cell": 17,
+      "player_clause": "Grey Monk stays stationary while performing dying",
+      "player_action": "dying",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "Grey Monk stays stationary while performing dying, Golden Bird stays stationary while performing no action",
+      "repair": null
+    },
+    {
+      "cell": 18,
+      "player_clause": "Grey Monk stays stationary while performing dying",
+      "player_action": "dying",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "Grey Monk stays stationary while performing dying, Golden Bird stays stationary while performing no action",
+      "repair": null
+    },
+    {
+      "cell": 19,
+      "player_clause": "Grey Monk stays stationary while performing dying",
+      "player_action": "dying",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "Grey Monk stays stationary while performing dying, Golden Bird stays stationary while performing no action",
+      "repair": null
+    }
+  ],
+  "attacknet_cells": [
+    {
+      "player_hit_probability": 0.0014103584690019488,
+      "boss_hit_probability": 0.024053551256656647,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.9997695088386536,
+      "boss_hit_probability": 0.0005357805639505386,
+      "player_hit": true,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0017007222631946206,
+      "boss_hit_probability": 0.004609572235494852,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0003150386910419911,
+      "boss_hit_probability": 3.1201914680423215e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.00017952796770259738,
+      "boss_hit_probability": 0.002889581024646759,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.014957086183130741,
+      "boss_hit_probability": 0.0010005044750869274,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0002780309587251395,
+      "boss_hit_probability": 0.004755199886858463,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0002959570847451687,
+      "boss_hit_probability": 0.0028009270317852497,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.019419347867369652,
+      "boss_hit_probability": 0.03358950838446617,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.9953904151916504,
+      "boss_hit_probability": 0.0018675660248845816,
+      "player_hit": true,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.19436779618263245,
+      "boss_hit_probability": 0.0009399438858963549,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.2465333193540573,
+      "boss_hit_probability": 0.006903838831931353,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.28378137946128845,
+      "boss_hit_probability": 0.03358950838446617,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.005384937860071659,
+      "boss_hit_probability": 0.001597845577634871,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0007321811863221228,
+      "boss_hit_probability": 0.00013982206291984767,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0018675660248845816,
+      "boss_hit_probability": 9.028038039105013e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0009399438858963549,
+      "boss_hit_probability": 5.475977377500385e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 4.006369272246957e-05,
+      "boss_hit_probability": 1.67014204635052e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 3.535625000949949e-05,
+      "boss_hit_probability": 2.014569145103451e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 5.829126530443318e-05,
+      "boss_hit_probability": 3.321419353596866e-05,
+      "player_hit": false,
+      "boss_hit": false
+    }
+  ],
+  "health_timeline": [
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 140,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 4,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 140,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 4,
+        "boss_skill_max": 20
+      },
+      "cell": 0,
+      "global_cell": 20,
+      "attacknet": {
+        "player_hit_probability": 0.0014103584690019488,
+        "boss_hit_probability": 0.024053551256656647,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": true,
+      "boss_hit": false,
+      "player_hit_detected": true,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": true,
+      "player_damage": 120,
+      "boss_damage": 0,
+      "skill_gain": 1,
+      "before": {
+        "player_hp": 140,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 4,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 20,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "cell": 1,
+      "global_cell": 21,
+      "attacknet": {
+        "player_hit_probability": 0.9997695088386536,
+        "boss_hit_probability": 0.0005357805639505386,
+        "player_hit": true,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 20,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 20,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "cell": 2,
+      "global_cell": 22,
+      "attacknet": {
+        "player_hit_probability": 0.0017007222631946206,
+        "boss_hit_probability": 0.004609572235494852,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 20,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 20,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "cell": 3,
+      "global_cell": 23,
+      "attacknet": {
+        "player_hit_probability": 0.0003150386910419911,
+        "boss_hit_probability": 3.1201914680423215e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 20,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 20,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "cell": 4,
+      "global_cell": 24,
+      "attacknet": {
+        "player_hit_probability": 0.00017952796770259738,
+        "boss_hit_probability": 0.002889581024646759,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 20,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 20,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "cell": 5,
+      "global_cell": 25,
+      "attacknet": {
+        "player_hit_probability": 0.014957086183130741,
+        "boss_hit_probability": 0.0010005044750869274,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 20,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 20,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "cell": 6,
+      "global_cell": 26,
+      "attacknet": {
+        "player_hit_probability": 0.0002780309587251395,
+        "boss_hit_probability": 0.004755199886858463,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 20,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 20,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "cell": 7,
+      "global_cell": 27,
+      "attacknet": {
+        "player_hit_probability": 0.0002959570847451687,
+        "boss_hit_probability": 0.0028009270317852497,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 20,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 20,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "cell": 8,
+      "global_cell": 28,
+      "attacknet": {
+        "player_hit_probability": 0.019419347867369652,
+        "boss_hit_probability": 0.03358950838446617,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": true,
+      "boss_hit": false,
+      "player_hit_detected": true,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": true,
+      "player_damage": 20,
+      "boss_damage": 0,
+      "skill_gain": 1,
+      "before": {
+        "player_hp": 20,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 5,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "cell": 9,
+      "global_cell": 29,
+      "attacknet": {
+        "player_hit_probability": 0.9953904151916504,
+        "boss_hit_probability": 0.0018675660248845816,
+        "player_hit": true,
+        "boss_hit": false
+      },
+      "outcome": "You Lose"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "cell": 10,
+      "global_cell": 30,
+      "attacknet": {
+        "player_hit_probability": 0.19436779618263245,
+        "boss_hit_probability": 0.0009399438858963549,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Lose"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "cell": 11,
+      "global_cell": 31,
+      "attacknet": {
+        "player_hit_probability": 0.2465333193540573,
+        "boss_hit_probability": 0.006903838831931353,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Lose"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "cell": 12,
+      "global_cell": 32,
+      "attacknet": {
+        "player_hit_probability": 0.28378137946128845,
+        "boss_hit_probability": 0.03358950838446617,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Lose"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "cell": 13,
+      "global_cell": 33,
+      "attacknet": {
+        "player_hit_probability": 0.005384937860071659,
+        "boss_hit_probability": 0.001597845577634871,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Lose"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "cell": 14,
+      "global_cell": 34,
+      "attacknet": {
+        "player_hit_probability": 0.0007321811863221228,
+        "boss_hit_probability": 0.00013982206291984767,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Lose"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "cell": 15,
+      "global_cell": 35,
+      "attacknet": {
+        "player_hit_probability": 0.0018675660248845816,
+        "boss_hit_probability": 9.028038039105013e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Lose"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "cell": 16,
+      "global_cell": 36,
+      "attacknet": {
+        "player_hit_probability": 0.0009399438858963549,
+        "boss_hit_probability": 5.475977377500385e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Lose"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "cell": 17,
+      "global_cell": 37,
+      "attacknet": {
+        "player_hit_probability": 4.006369272246957e-05,
+        "boss_hit_probability": 1.67014204635052e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Lose"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "cell": 18,
+      "global_cell": 38,
+      "attacknet": {
+        "player_hit_probability": 3.535625000949949e-05,
+        "boss_hit_probability": 2.014569145103451e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Lose"
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 0,
+        "boss_hp": 380,
+        "player_attack": 120,
+        "boss_attack": 120,
+        "boss_skill": 6,
+        "boss_skill_max": 20
+      },
+      "cell": 19,
+      "global_cell": 39,
+      "attacknet": {
+        "player_hit_probability": 5.829126530443318e-05,
+        "boss_hit_probability": 3.321419353596866e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": "You Lose"
+    }
+  ],
+  "outcome": "You Lose",
+  "death_detected_cell": 29
+}

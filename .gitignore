@@ -1,0 +1,11 @@
+output/*
+!output/README.md
+!output/ar_agentic/
+external_models/
+model/**
+!model/README.md
+!model/SHA256SUMS
+code/.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gamedirector-world-model"
+version = "0.1.0"
+description = "First-frame and temporally prompted video world model for GameDirector"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+dependencies = [
+  "torch>=2.0.0", "torchvision", "transformers", "accelerate", "peft",
+  "safetensors", "einops", "numpy",
+  "Pillow", "tqdm", "imageio[ffmpeg]", "sentencepiece", "protobuf",
+  "ftfy", "regex", "modelscope", "huggingface_hub",
+]
+
+[project.scripts]
+vrising-world-model = "world_model.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["world_model*", "diffsynth*"]
+namespaces = true

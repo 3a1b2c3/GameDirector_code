@@ -1,0 +1,1281 @@
+{
+  "game": "nrftw",
+  "tick": 6,
+  "cells": 20,
+  "duration_s": 5.0,
+  "partial_tick": false,
+  "characters": {
+    "player": "Red Knight",
+    "boss": "Plague Leader"
+  },
+  "clip": "output/ar_agentic/nrftw/nrftw_03/clip_0006.mp4",
+  "world_model_checkpoint": "model/world_model/ar_world_model.safetensors",
+  "world_model_runtime": {
+    "cfg_scale": 2.0,
+    "sampler": "euler",
+    "steps": 30,
+    "attention_sink": true,
+    "attention_sink_layout": {
+      "fixed_first_latents": 3,
+      "sliding_latest_latents": 17,
+      "max_latents": 20
+    },
+    "reanchor_between_ticks": false,
+    "kv_reset_between_ticks": false,
+    "rgb_vae_reencode_between_ticks": false,
+    "tick_cells": 20
+  },
+  "combat_before": {
+    "player_hp": 400,
+    "boss_hp": 60,
+    "player_attack": 40,
+    "boss_attack": 20,
+    "boss_skill": 16,
+    "boss_skill_max": 20
+  },
+  "combat_after": {
+    "player_hp": 400,
+    "boss_hp": 60,
+    "player_attack": 40,
+    "boss_attack": 20,
+    "boss_skill": 16,
+    "boss_skill_max": 20
+  },
+  "situation_input": {
+    "distance_value": 3.1055,
+    "distance_bin": "2-4",
+    "dp_value": 3.1055,
+    "dp_bin": "2-4",
+    "angle_value": -0.369334,
+    "angle_bin": "left",
+    "relative_side": "left",
+    "front_cone": false,
+    "decision_zone": "side",
+    "tactical_sector": "left_flank",
+    "behind": false,
+    "distance_unit": "NRFTW world-coordinate units (horizontal_distance)"
+  },
+  "situation_next": {
+    "distance_value": 2.9492,
+    "distance_bin": "2-4",
+    "dp_value": 2.9492,
+    "dp_bin": "2-4",
+    "angle_value": 0.05401,
+    "angle_bin": "right",
+    "relative_side": "right",
+    "front_cone": true,
+    "decision_zone": "front",
+    "tactical_sector": "front",
+    "behind": false,
+    "distance_unit": "NRFTW world-coordinate units (horizontal_distance)"
+  },
+  "cooldowns_before": {
+    "left_spin": {
+      "seconds_since_last_use": 60.0,
+      "cooldown_s": 3.25,
+      "ready": true
+    },
+    "right_spin": {
+      "seconds_since_last_use": 30.0,
+      "cooldown_s": 3.0,
+      "ready": true
+    },
+    "shield_charge": {
+      "seconds_since_last_use": 60.0,
+      "cooldown_s": 16.25,
+      "ready": true
+    }
+  },
+  "cooldowns_after": {
+    "left_spin": {
+      "seconds_since_last_use": 60.0,
+      "cooldown_s": 3.25,
+      "ready": true
+    },
+    "right_spin": {
+      "seconds_since_last_use": 35.0,
+      "cooldown_s": 3.0,
+      "ready": true
+    },
+    "shield_charge": {
+      "seconds_since_last_use": 60.0,
+      "cooldown_s": 16.25,
+      "ready": true
+    }
+  },
+  "plan_events": [],
+  "planner": {
+    "source": "automatic_melee",
+    "error": "boss skill 16/20",
+    "raw": null
+  },
+  "player_track_wrapped": false,
+  "prompt_cells": [
+    {
+      "cell": 0,
+      "player_clause": "Red Knight moves right while performing no action",
+      "player_action": "no_action",
+      "player_movement": "right",
+      "boss_requested": {
+        "action": "melee_attack",
+        "movement": "down_right"
+      },
+      "boss_emitted": {
+        "action": "melee_attack",
+        "movement": "down_right"
+      },
+      "prompt": "Red Knight moves right while performing no action, Plague Leader moves down-right while performing melee attack in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 1,
+      "player_clause": "Red Knight moves right while performing no action",
+      "player_action": "no_action",
+      "player_movement": "right",
+      "boss_requested": {
+        "action": "melee_attack",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "melee_attack",
+        "movement": "none"
+      },
+      "prompt": "Red Knight moves right while performing no action, Plague Leader stays stationary while performing melee attack in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 2,
+      "player_clause": "Red Knight moves right while performing no action",
+      "player_action": "no_action",
+      "player_movement": "right",
+      "boss_requested": {
+        "action": "melee_attack",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "melee_attack",
+        "movement": "none"
+      },
+      "prompt": "Red Knight moves right while performing no action, Plague Leader stays stationary while performing melee attack in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 3,
+      "player_clause": "Red Knight moves right while performing no action",
+      "player_action": "no_action",
+      "player_movement": "right",
+      "boss_requested": {
+        "action": "melee_attack",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "melee_attack",
+        "movement": "none"
+      },
+      "prompt": "Red Knight moves right while performing no action, Plague Leader stays stationary while performing melee attack in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 4,
+      "player_clause": "Red Knight moves right while performing no action",
+      "player_action": "no_action",
+      "player_movement": "right",
+      "boss_requested": {
+        "action": "melee_attack",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "melee_attack",
+        "movement": "none"
+      },
+      "prompt": "Red Knight moves right while performing no action, Plague Leader stays stationary while performing melee attack in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 5,
+      "player_clause": "Red Knight moves up while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "boss_requested": {
+        "action": "melee_attack",
+        "movement": "up_right"
+      },
+      "boss_emitted": {
+        "action": "melee_attack",
+        "movement": "up_right"
+      },
+      "prompt": "Red Knight moves up while performing melee attack, Plague Leader moves up-right while performing melee attack in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 6,
+      "player_clause": "Red Knight moves up while performing no action",
+      "player_action": "no_action",
+      "player_movement": "up",
+      "boss_requested": {
+        "action": "melee_attack",
+        "movement": "up_right"
+      },
+      "boss_emitted": {
+        "action": "melee_attack",
+        "movement": "up_right"
+      },
+      "prompt": "Red Knight moves up while performing no action, Plague Leader moves up-right while performing melee attack in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 7,
+      "player_clause": "Red Knight stays stationary while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "melee_attack",
+        "movement": "down_left"
+      },
+      "boss_emitted": {
+        "action": "melee_attack",
+        "movement": "down_left"
+      },
+      "prompt": "Red Knight stays stationary while performing melee attack, Plague Leader moves down-left while performing melee attack in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 8,
+      "player_clause": "Red Knight stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "melee_attack",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "melee_attack",
+        "movement": "none"
+      },
+      "prompt": "Red Knight stays stationary while performing no action, Plague Leader stays stationary while performing melee attack in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 9,
+      "player_clause": "Red Knight stays stationary while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "melee_attack",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "melee_attack",
+        "movement": "none"
+      },
+      "prompt": "Red Knight stays stationary while performing melee attack, Plague Leader stays stationary while performing melee attack in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 10,
+      "player_clause": "Red Knight stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "melee_attack",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "melee_attack",
+        "movement": "none"
+      },
+      "prompt": "Red Knight stays stationary while performing no action, Plague Leader stays stationary while performing melee attack in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 11,
+      "player_clause": "Red Knight stays stationary while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "melee_attack",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "melee_attack",
+        "movement": "none"
+      },
+      "prompt": "Red Knight stays stationary while performing melee attack, Plague Leader stays stationary while performing melee attack in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 12,
+      "player_clause": "Red Knight stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "melee_attack",
+        "movement": "left"
+      },
+      "boss_emitted": {
+        "action": "melee_attack",
+        "movement": "left"
+      },
+      "prompt": "Red Knight stays stationary while performing no action, Plague Leader moves left while performing melee attack in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 13,
+      "player_clause": "Red Knight stays stationary while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "Red Knight stays stationary while performing melee attack, Plague Leader stays stationary while performing no action in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 14,
+      "player_clause": "Red Knight moves down while performing no action",
+      "player_action": "no_action",
+      "player_movement": "down",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "Red Knight moves down while performing no action, Plague Leader stays stationary while performing no action in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 15,
+      "player_clause": "Red Knight moves up while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "up",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "Red Knight moves up while performing melee attack, Plague Leader stays stationary while performing no action in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 16,
+      "player_clause": "Red Knight moves up while performing no action",
+      "player_action": "no_action",
+      "player_movement": "up",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "Red Knight moves up while performing no action, Plague Leader stays stationary while performing no action in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 17,
+      "player_clause": "Red Knight stays stationary while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "Red Knight stays stationary while performing melee attack, Plague Leader stays stationary while performing no action in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 18,
+      "player_clause": "Red Knight stays stationary while performing no action",
+      "player_action": "no_action",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "Red Knight stays stationary while performing no action, Plague Leader stays stationary while performing no action in Frozen Wasteland",
+      "repair": null
+    },
+    {
+      "cell": 19,
+      "player_clause": "Red Knight stays stationary while performing melee attack",
+      "player_action": "melee_attack",
+      "player_movement": "none",
+      "boss_requested": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "boss_emitted": {
+        "action": "no_action",
+        "movement": "none"
+      },
+      "prompt": "Red Knight stays stationary while performing melee attack, Plague Leader stays stationary while performing no action in Frozen Wasteland",
+      "repair": null
+    }
+  ],
+  "attacknet_cells": [
+    {
+      "player_hit_probability": 0.0008295892039313912,
+      "boss_hit_probability": 7.031184941297397e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0016484829830005765,
+      "boss_hit_probability": 0.00013135180051904172,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0006667023408226669,
+      "boss_hit_probability": 5.475977377500385e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0006878511630930007,
+      "boss_hit_probability": 4.539786823443137e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.004609572235494852,
+      "boss_hit_probability": 0.00020342698553577065,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0009110511746257544,
+      "boss_hit_probability": 9.028038039105013e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0014103584690019488,
+      "boss_hit_probability": 0.00013135180051904172,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0005884087877348065,
+      "boss_hit_probability": 0.0005193048855289817,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 5.475977377500385e-05,
+      "boss_hit_probability": 0.0009399438858963549,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 7.031184941297397e-05,
+      "boss_hit_probability": 0.0011335690505802631,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.00021654405281879008,
+      "boss_hit_probability": 4.006369272246957e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0002611903182696551,
+      "boss_hit_probability": 8.481103577651083e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0001686527393758297,
+      "boss_hit_probability": 0.00014883848780300468,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.00020342698553577065,
+      "boss_hit_probability": 0.001597845577634871,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 4.539786823443137e-05,
+      "boss_hit_probability": 0.00013135180051904172,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.00014883848780300468,
+      "boss_hit_probability": 4.832564081880264e-05,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.00015843621804378927,
+      "boss_hit_probability": 0.0006070755189284682,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 0.0001686527393758297,
+      "boss_hit_probability": 0.0009110511746257544,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 9.610241977497935e-05,
+      "boss_hit_probability": 0.0014103584690019488,
+      "player_hit": false,
+      "boss_hit": false
+    },
+    {
+      "player_hit_probability": 1.4738982827111613e-05,
+      "boss_hit_probability": 0.0012448433553799987,
+      "player_hit": false,
+      "boss_hit": false
+    }
+  ],
+  "health_timeline": [
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 0,
+      "global_cell": 120,
+      "attacknet": {
+        "player_hit_probability": 0.0008295892039313912,
+        "boss_hit_probability": 7.031184941297397e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 1,
+      "global_cell": 121,
+      "attacknet": {
+        "player_hit_probability": 0.0016484829830005765,
+        "boss_hit_probability": 0.00013135180051904172,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 2,
+      "global_cell": 122,
+      "attacknet": {
+        "player_hit_probability": 0.0006667023408226669,
+        "boss_hit_probability": 5.475977377500385e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 3,
+      "global_cell": 123,
+      "attacknet": {
+        "player_hit_probability": 0.0006878511630930007,
+        "boss_hit_probability": 4.539786823443137e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 4,
+      "global_cell": 124,
+      "attacknet": {
+        "player_hit_probability": 0.004609572235494852,
+        "boss_hit_probability": 0.00020342698553577065,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 5,
+      "global_cell": 125,
+      "attacknet": {
+        "player_hit_probability": 0.0009110511746257544,
+        "boss_hit_probability": 9.028038039105013e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 6,
+      "global_cell": 126,
+      "attacknet": {
+        "player_hit_probability": 0.0014103584690019488,
+        "boss_hit_probability": 0.00013135180051904172,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 7,
+      "global_cell": 127,
+      "attacknet": {
+        "player_hit_probability": 0.0005884087877348065,
+        "boss_hit_probability": 0.0005193048855289817,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 8,
+      "global_cell": 128,
+      "attacknet": {
+        "player_hit_probability": 5.475977377500385e-05,
+        "boss_hit_probability": 0.0009399438858963549,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 9,
+      "global_cell": 129,
+      "attacknet": {
+        "player_hit_probability": 7.031184941297397e-05,
+        "boss_hit_probability": 0.0011335690505802631,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 10,
+      "global_cell": 130,
+      "attacknet": {
+        "player_hit_probability": 0.00021654405281879008,
+        "boss_hit_probability": 4.006369272246957e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 11,
+      "global_cell": 131,
+      "attacknet": {
+        "player_hit_probability": 0.0002611903182696551,
+        "boss_hit_probability": 8.481103577651083e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": true,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 12,
+      "global_cell": 132,
+      "attacknet": {
+        "player_hit_probability": 0.0001686527393758297,
+        "boss_hit_probability": 0.00014883848780300468,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 13,
+      "global_cell": 133,
+      "attacknet": {
+        "player_hit_probability": 0.00020342698553577065,
+        "boss_hit_probability": 0.001597845577634871,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 14,
+      "global_cell": 134,
+      "attacknet": {
+        "player_hit_probability": 4.539786823443137e-05,
+        "boss_hit_probability": 0.00013135180051904172,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 15,
+      "global_cell": 135,
+      "attacknet": {
+        "player_hit_probability": 0.00014883848780300468,
+        "boss_hit_probability": 4.832564081880264e-05,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 16,
+      "global_cell": 136,
+      "attacknet": {
+        "player_hit_probability": 0.00015843621804378927,
+        "boss_hit_probability": 0.0006070755189284682,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 17,
+      "global_cell": 137,
+      "attacknet": {
+        "player_hit_probability": 0.0001686527393758297,
+        "boss_hit_probability": 0.0009110511746257544,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": false,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 18,
+      "global_cell": 138,
+      "attacknet": {
+        "player_hit_probability": 9.610241977497935e-05,
+        "boss_hit_probability": 0.0014103584690019488,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    },
+    {
+      "player_hit": false,
+      "boss_hit": false,
+      "player_hit_detected": false,
+      "boss_hit_detected": false,
+      "player_attack_prompt": true,
+      "boss_attack_prompt": false,
+      "player_damage": 0,
+      "boss_damage": 0,
+      "skill_gain": 0,
+      "before": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "after": {
+        "player_hp": 400,
+        "boss_hp": 60,
+        "player_attack": 40,
+        "boss_attack": 20,
+        "boss_skill": 16,
+        "boss_skill_max": 20
+      },
+      "cell": 19,
+      "global_cell": 139,
+      "attacknet": {
+        "player_hit_probability": 1.4738982827111613e-05,
+        "boss_hit_probability": 0.0012448433553799987,
+        "player_hit": false,
+        "boss_hit": false
+      },
+      "outcome": null
+    }
+  ],
+  "outcome": null,
+  "death_detected_cell": null
+}

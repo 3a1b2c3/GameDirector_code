@@ -1,0 +1,61 @@
+{
+  "game": "hk",
+  "characters": {
+    "player": "the Knight",
+    "boss": "Hornet"
+  },
+  "combat": {
+    "player_hp": 500,
+    "boss_hp": 500,
+    "player_attack": 40,
+    "boss_attack": 20,
+    "boss_skill": 20,
+    "boss_skill_max": 20
+  },
+  "attacknet_warm_start_not_applied": {
+    "player_hit_probability": 0.0064882696606218815,
+    "boss_hit_probability": 0.9997387528419495,
+    "player_hit": false,
+    "boss_hit": true
+  },
+  "situation": {
+    "distance_value": 3.2031,
+    "distance_bin": "2-4",
+    "dp_value": 3.2031,
+    "dp_bin": "2-4",
+    "angle_value": 3.141141,
+    "angle_bin": "right",
+    "relative_side": "right",
+    "front_cone": false,
+    "decision_zone": "behind",
+    "tactical_sector": "behind",
+    "behind": true,
+    "distance_unit": "Hollow Knight world-coordinate units (distance_2d)"
+  },
+  "visual_input": "initial RGB frame copied three times",
+  "world_model_runtime": {
+    "cfg_scale": 2.0,
+    "sampler": "euler",
+    "steps": 30,
+    "attention_sink": true,
+    "attention_sink_layout": {
+      "fixed_first_latents": 3,
+      "sliding_latest_latents": 17,
+      "max_latents": 20
+    },
+    "reanchor_between_ticks": false,
+    "kv_reset_between_ticks": false,
+    "rgb_vae_reencode_between_ticks": false,
+    "tick_cells": 20
+  },
+  "outcome_ui": {
+    "enabled": true,
+    "fade_seconds": 2.0
+  },
+  "termination_policy": {
+    "mode": "post_death_window",
+    "post_death_seconds": 5.0,
+    "post_death_cells": 20,
+    "max_cells": 240
+  }
+}
