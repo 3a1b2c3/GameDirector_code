@@ -9,3 +9,8 @@ code/.venv*/
 __pycache__/
 *.py[cod]
 .pytest_cache/
+
+# local Windows setup and run artefacts
+# backups the setup scripts and edits leave next to the originals (foo.before_xxx.bat, ...)
+*.before_*
+*.log
